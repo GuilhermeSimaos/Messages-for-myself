@@ -1,6 +1,6 @@
 // const { default: axios } = require("axios");
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = "https://messages-for-myself-backend.vercel.app";
 
 const message = document.getElementById("message");
 const messageForm = document.getElementById("messageForm");
