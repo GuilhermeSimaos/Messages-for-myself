@@ -17,7 +17,12 @@ postMessage.addEventListener("click", () => {
       "message": messageForm.value
     };
   
-    axios.post(SERVER_URL+"/post/message", json).then((response) => {
+    axios.post(SERVER_URL+"/post/message", {
+      headers:{
+        'Access-Control-Allow-Origin': 'https://messages-for-myself.vercel.app'
+      },
+      json
+    }).then((response) => {
       console.log(response.data);
       if (response.status == 200) {
         result.classList.add("text-success");
