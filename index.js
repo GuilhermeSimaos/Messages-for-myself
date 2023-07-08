@@ -45,9 +45,9 @@ const tableMessage = document.getElementById("tableMessage");
 const random = document.getElementById("getRandom");
 random.addEventListener("click", () => {
   axios
-    .get(SERVER_URL + "/get/random-message", {
+    .get(`${SERVER_URL}/get/random-message`, {
       headers: {
-        "Access-Control-Allow-Origin": "https://messages-for-myself.vercel.app",
+        "Access-Control-Allow-Origin": '*',
       },
     })
     .then((response) => {
@@ -64,9 +64,9 @@ random.addEventListener("click", () => {
 const all = document.getElementById("getAll");
 all.addEventListener("click", () => {
   axios
-    .get(SERVER_URL + "/get/all-messages", {
+    .get(`${SERVER_URL}/get/random-message`, {
       headers: {
-        "Access-Control-Allow-Origin": "https://messages-for-myself.vercel.app",
+        "Access-Control-Allow-Origin": '*',
       },
     })
     .then((response) => {
